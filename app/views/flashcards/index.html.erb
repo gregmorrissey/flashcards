@@ -1,14 +1,16 @@
+<head>
+
+<title> Flashcards </title>
+
+<link rel="stylesheet" href="/css/styles.css">
+
+</head>
+
 <ul>
-  <li>
-    <img width='200' src='https://www.kellogg.northwestern.edu/images/students/all/x402651.jpg'>
-    <h3>Jocelyn Alt</h3>
-  </li>
-  <li>
-    <img width='200' src='https://www.kellogg.northwestern.edu/images/students/all/x410579.jpg'>
-    <h3>Ty Benefiel</h3>
+  <% @students.each do |student| %>
+    <li> 
+      <p><img width="200" src = <%= student["image_url"]%>></p>
+      <h3><%= student["first_name"] %> <%= student["last_name"] %></h3>
     </li>
-  <li>
-    <img width='200' src='https://www.kellogg.northwestern.edu/images/students/all/x417523.jpg'>
-    <h3>Nick Chin</h3>
-  </li>
+  <% end %>
 </ul>
